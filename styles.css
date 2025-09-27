@@ -1,0 +1,104 @@
+/* Hover button */
+.hover-button {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.4s ease, transform 0.2s ease-in-out;
+}
+.hover-button:hover {
+  background-color: #2ecc71;
+  transform: scale(1.1);
+}
+
+/* Box with multiple property transitions */
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: #e74c3c;
+  margin: 20px;
+  transition: width 0.5s ease, height 0.5s ease, background-color 0.3s ease;
+}
+.box:hover {
+  width: 150px;
+  height: 150px;
+  background-color: #8e44ad;
+}
+
+/* JavaScript-triggered animation */
+.js-box {
+  width: 100px;
+  height: 100px;
+  background-color: #3498db;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.js-box.animate {
+  opacity: 1;
+  animation: moveRight 2s ease-in-out forwards;
+}
+@keyframes moveRight {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(200px); }
+}
+
+/* Circle animation */
+#circle {
+  width: 50px;
+  height: 50px;
+  background-color: #e74c3c;
+  border-radius: 50%;
+  position: relative;
+}
+
+/* Moving box animation */
+#movingBox {
+  width: 100px;
+  height: 100px;
+  background-color: #8e44ad;
+  animation: slide 5s linear infinite;
+}
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(300px); }
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  animation: scaleUp 0.5s ease forwards;
+}
+@keyframes scaleUp {
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.modal.show {
+  display: flex;
+}
+/* Form input focus */
+input[type="text"], input[type="email"], textarea {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
